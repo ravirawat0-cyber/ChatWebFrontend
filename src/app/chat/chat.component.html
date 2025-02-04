@@ -1,0 +1,30 @@
+<div class="chat-main-container">
+  <div *ngIf="!isJoined; else chatRoomTemplate">
+    <h2 class="chat-room">Join Chat Room</h2>
+    <div class="inputs-btn-container">
+      <input [(ngModel)]="username" placeholder="Enter Username" />
+      <input [(ngModel)]="chatRoom" placeholder="Enter Chat Room" />
+
+      <button (click)="joinChat()">Join</button>
+    </div>
+  </div>
+
+  <ng-template #chatRoomTemplate>
+    <div>
+      <h2 class="chat-room">Chat Room: {{ chatRoom }}</h2>
+      <div *ngFor="let message of messages" class="message">
+        <p>{{ message }}</p>
+      </div>
+
+      <div class="inputs-btn-container">
+        <input
+          [(ngModel)]="message"
+          placeholder="Enter message"
+          class="input messages"
+        />
+        <button (click)="sendMessage()">Send</button>
+      </div>
+    </div>
+  </ng-template>
+  <div class="footer-text">Ravi Rawat</div>
+</div>

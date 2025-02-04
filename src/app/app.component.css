@@ -1,0 +1,12 @@
+* {
+  background-image: url(../assets/matrix-356024_1920.jpg);
+  color: #39ff14;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
