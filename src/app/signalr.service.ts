@@ -15,7 +15,7 @@ export class SignalrService {
 
   public startConnection(username: string, chatRoom: string): void {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7060/chatHub', {
+      .withUrl('http://chatapp.somee.com/chatHub', {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets,
       })
